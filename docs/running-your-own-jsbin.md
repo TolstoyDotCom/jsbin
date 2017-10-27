@@ -82,6 +82,19 @@ Note that in the above config, `jsbin.com` is what is used in the HTML and JavaS
 
 Now the `jsbin` node process is listening on port 8000, but the client facing urls are all port 80.
 
+### Additional settings
+
+#### Vanity URLs
+Bins can be shared at vanity URLs. To turn this feature on or off or make it only available to pro users, add the following optional setting to your `config.local.json`:
+
+```json
+  "features": {
+    "shareVanityURLs": "always"
+  },
+```
+
+Other possible values are "never" and "pro" (pro users only). "pro" is the default.
+
 ### Building for production
 
 JS Bin's build process uses Grunt, so assuming you've cloned a copy, you will need the dev dependancies and the grunt cli:
